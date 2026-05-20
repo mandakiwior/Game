@@ -1,2 +1,2 @@
-# Lundrive
-Système de gestion de fichiers en ligne
+# Game store
+Plateforme de jeux videos
