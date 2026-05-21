@@ -1,0 +1,223 @@
+/* ---- Base & Couleurs (Rouge Switch à l'honneur) ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #ffffff;
+    padding-bottom: 50px;
+}
+
+/* ---- En-tête ---- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #05070c;
+    border-bottom: 1px solid #1a2333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    font-weight: bold;
+    background: #ef4444; /* Rouge Switch */
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+.logo-text h1 {
+    font-size: 20px;
+}
+
+.logo-text p {
+    font-size: 11px;
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ef4444; /* Surbrillance rouge Switch */
+}
+
+/* ---- Titre de la Page ---- */
+.page-title-container {
+    text-align: center;
+    padding: 40px 20px 10px 20px;
+}
+
+.page-title-container h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.page-title-container p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* ---- Grille ---- */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ---- Cartes Jeux Switch ---- */
+.game-card {
+    background-color: #020408;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #ef4444; /* Bordure Rouge Switch */
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(239, 68, 68, 0.15); /* Ombre rouge au survol */
+}
+
+.card-image-wrapper {
+    position: relative;
+    height: 230px;
+}
+
+.game-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badge Switch */
+.badge-switch {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #ef4444;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 12px 15px 12px;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    border-radius: 0 0 8px 8px;
+}
+
+.badge-icon {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* ---- Contenu & Section Prix ---- */
+.game-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.game-content h2 {
+    font-size: 22px;
+}
+
+/* Badge Exclusif Switch */
+.excl-tag {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid #ef4444;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+.game-content p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Footer de la carte contenant Prix + Bouton */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #1a2333;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Styles pour les prix en promotion */
+.price-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.old-price {
+    font-size: 12px;
+    color: #64748b;
+    text-decoration: line-through;
+}
+
+.price.promo {
+    color: #22c55e;
+}
+
+/* Bouton d'action */
+.btn-action {
+    padding: 10px 18px;
+    border: 1px solid #ef4444;
+    color: #ef4444;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+}
