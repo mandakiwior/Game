@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Hub - Annonces Jeux Android</title>
+    <style>
+        /* ---- Base & Couleurs (Vert Android à l'honneur) ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #ffffff;
+    padding-bottom: 50px;
+}
+
+/* ---- En-tête ---- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #05070c;
+    border-bottom: 1px solid #1a2333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    font-weight: bold;
+    background: #22c55e; /* Vert Android */
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+.logo-text h1 {
+    font-size: 20px;
+}
+
+.logo-text p {
+    font-size: 11px;
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #22c55e; /* Surbrillance verte Android */
+}
+
+/* ---- Titre de la Page ---- */
+.page-title-container {
+    text-align: center;
+    padding: 40px 20px 10px 20px;
+}
+
+.page-title-container h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.page-title-container p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* ---- Grille ---- */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ---- Cartes Jeux Android ---- */
+.game-card {
+    background-color: #020408;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #22c55e; /* Bordure Verte Android */
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(34, 197, 94, 0.15); /* Ombre verte au survol */
+}
+
+.card-image-wrapper {
+    position: relative;
+    height: 230px;
+}
+
+.game-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badge Android */
+.badge-android {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #22c55e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 12px 15px 12px;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    border-radius: 0 0 8px 8px;
+}
+
+.badge-icon {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* ---- Contenu & Section Prix ---- */
+.game-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.game-content h2 {
+    font-size: 22px;
+}
+
+.game-content p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Footer de la carte contenant Prix + Bouton */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #1a2333;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Précision spécifique aux jeux mobiles */
+.price.free {
+    color: #22c55e;
+}
+
+.price-sub {
+    font-size: 11px;
+    color: #64748b;
+    display: block;
+}
+
+/* Styles pour les prix en promotion */
+.price-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.old-price {
+    font-size: 12px;
+    color: #64748b;
+    text-decoration: line-through;
+}
+
+.price.promo {
+    color: #eab308; /* Couleur jaune d'alerte pour le prix promo mobile */
+}
+
+/* Bouton d'action */
+.btn-action {
+    padding: 10px 18px;
+    border: 1px solid #22c55e;
+    color: #22c55e;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #22c55e;
+    color: #000000;
+}
+    </style>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header class="main-header">
+        <div class="logo">
+            <span class="logo-icon">G</span>
+            <div class="logo-text">
+                <h1>GAMING HUB</h1>
+                <p>ANNONCES JEUX ANDROID</p>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="jeux-pc.html">Jeux PC</a>
+            <a href="jeux-playstation.html">PlayStation</a>
+            <a href="#" class="active">Android</a>
+            <a href="#">Switch</a>
+        </nav>
+    </header>
+
+    <!-- Titre de la page -->
+    <div class="page-title-container">
+        <h2>Annonces de Jeux Android</h2>
+        <p>Retrouvez les meilleurs jeux tactiles pour smartphones et tablettes.</p>
+    </div>
+
+    <!-- Grille des jeux Android -->
+    <main class="games-grid">
+
+        <!-- Jeu 1: Clash of Clans -->
+        <article class="game-card android-border">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR25TlNh8ve7ot5SIbP9nwgGNygwmb6g2dxFQ&s" alt="Clash of Clans" class="game-img">
+                <span class="badge badge-android">
+                    <span class="badge-title">ANDROID</span>
+                    <span class="badge-icon">📱</span>
+                </span>
+            </div>
+            <div class="game-content">
+                <h2>Clash of Clans</h2>
+                <p>Formez votre armée, construisez votre village et menez votre clan à la victoire dans des guerres épiques.</p>
+                
+                <!-- Zone Prix (Modèle Gratuit) -->
+                <div class="card-footer">
+                    <div class="price-container">
+                        <span class="price free">Gratuit</span>
+                        <span class="price-sub">Achats intégrés</span>
+                    </div>
+                    <a href="#" class="btn-action">VOIR L'ANNONCE</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Jeu 2: Monument Valley -->
+        <article class="game-card android-border">
+            <div class="card-image-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNrYvC9vYt6ggpzbCfnyMm411yAaLIJ53i4A&s" alt="Monument Valley" class="game-img">
+                <span class="badge badge-android">
+                    <span class="badge-title">ANDROID</span>
+                    <span class="badge-icon">📱</span>
+                </span>
+            </div>
+            <div class="game-content">
+                <h2>Monument Valley</h2>
+                <p>Guidez une princesse silencieuse à travers un monde d'une beauté saisissante à l'architecture impossible.</p>
+                
+                <!-- Zone Prix (Modèle Payant) -->
+                <div class="card-footer">
+                    <span class="price">3,99 €</span>
+                    <a href="#" class="btn-action">VOIR L'ANNONCE</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Jeu 3: Minecraft Mobile -->
+        <article class="game-card android-border">
+            <div class="card-image-wrapper">
+                <img src="data:image/jpeg;base64,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" alt="Minecraft" class="game-img">
+                <span class="badge badge-android">
+                    <span class="badge-title">ANDROID</span>
+                    <span class="badge-icon">📱</span>
+                </span>
+            </div>
+            <div class="game-content">
+                <h2>Free Fire</h2>
+                <p>Minecraft est un jeu de survie et de construction bac à sable où les joueurs manipulent des blocs dans un monde généré procéduralement. Ses fonctionnalités phares incluent l'exploration, la récolte de ressources, la fabrication d'objets, l'agriculture et l'affrontement de créatures, jouables en solo ou en multijoueur multiplateforme.</p>
+                
+                <!-- Zone Prix (Modèle Promotion) -->
+                <div class="card-footer">
+                    <div class="price-container">
+                        <span class="price free">Gratuit</span>
+                        <span class="price-sub">Achats intégrés</span>
+                    </div>
+                    <a href="#" class="btn-action">VOIR L'ANNONCE</a>
+                </div>
+            </div>
+        </article>
+
+         <!-- Jeu 4: Free Fire -->
+         <article class="game-card android-border">
+            <div class="card-image-wrapper">
+                <img src="https://play-lh.googleusercontent.com/Tzh1vMigK1Cn7_KIaMvKBVQRQapIMWMMqqyA6UqJTAYRpino4vvX6ZvYcVjZ_D8g19-DfHKCVeO2QPWl8vHGzw=w240-h480-rw" alt="Free fire" class="game-img">
+                <span class="badge badge-android">
+                    <span class="badge-title">ANDROID</span>
+                    <span class="badge-icon">📱</span>
+                </span>
+            </div>
+            <div class="game-content">
+                <h2>Free Fire</h2>
+                <p>Vous êtes parachuté sur une île avec cinquante joueurs pour piller des armes, éliminer vos adversaires et survivre à une zone de sécurité qui rétrécit afin d'être le dernier survivant.</p>
+                
+                <!-- Zone Prix (Modèle Promotion) -->
+                <div class="card-footer">
+                    <div class="price-container">
+                        <span class="price free">Gratuit</span>
+                        <span class="price-sub">Achats intégrés</span>
+                    </div>
+                    <a href="#" class="btn-action">VOIR L'ANNONCE</a>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+</body>
+</html>
