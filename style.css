@@ -1,0 +1,169 @@
+/* ---- Style Global ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0f19; /* Fond sombre comme sur l'image */
+    color: #ffffff;
+    padding-bottom: 50px;
+}
+
+/* ---- En-tête / Barre de navigation ---- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #05070c;
+    border-bottom: 1px solid #1a2333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #a855f7, #3b82f6);
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+.logo-text h1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.logo-text p {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ffffff;
+}
+
+/* ---- Grille Principale ---- */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ---- La Carte de Jeu ---- */
+.game-card {
+    background-color: #020408;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Bordures spécifiques aux couleurs de l'image */
+.pc-border { border-color: #eab308; }       /* Jaune */
+.ps-border { border-color: #2563eb; }       /* Bleu */
+.android-border { border-color: #22c55e; }  /* Vert */
+.switch-border { border-color: #ef4444; }   /* Rouge */
+
+/* Conteneur de l'image et du badge */
+.card-image-wrapper {
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+
+.game-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---- Les Badges (En haut à droite) ---- */
+.badge {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 12px 15px 12px;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 0 0 8px 8px; /* Forme de ruban pendant */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.badge-icon {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* Couleurs des rubans */
+.badge-pc { background-color: #eab308; color: #000; }
+.badge-ps { background-color: #2563eb; color: #fff; }
+.badge-android { background-color: #22c55e; color: #fff; }
+.badge-switch { background-color: #ef4444; color: #fff; }
+
+/* ---- Contenu Texte de la carte ---- */
+.game-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.game-content h2 {
+    font-size: 24px;
+}
+
+.game-content p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* ---- Bouton d'action ---- */
+.btn-action {
+    align-self: flex-start;
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
